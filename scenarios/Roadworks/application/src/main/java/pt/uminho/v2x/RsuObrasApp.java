@@ -207,6 +207,8 @@ public class RsuObrasApp extends AbstractApplication<RoadSideUnitOperatingSystem
                 .channel(AdHocChannel.CCH)
                 .build();
 
+            int MAX_HOP_LIMIT = 3; 
+
             AvisoObraMessage msg = new AvisoObraMessage(
                 routing,
                 "WORKZONE_SPEED",
@@ -214,7 +216,9 @@ public class RsuObrasApp extends AbstractApplication<RoadSideUnitOperatingSystem
                 currentRecommendationMps,
                 currentState.name(),
                 getOs().getSimulationTime(),
-                getOs().getId()
+                getOs().getId(),
+                MAX_HOP_LIMIT,
+                getOs().getPosition() // A RSU insere a sua própria coordenada GPS
             );
 
             getOs().getAdHocModule().sendV2xMessage(msg);

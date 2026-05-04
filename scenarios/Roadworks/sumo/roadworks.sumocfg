@@ -1,16 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <configuration>
     <input>
         <net-file value="ROAD/mapa.net.xml"/>
         <route-files value="TRAFFIC/trafego.rou.xml"/>
-        <additional-files value="ROAD/decoracao.add.xml"/>
+        <additional-files value="mosaic_types.add.xml,ROAD/decoracao.add.xml"/>
     </input>
     
     <output>
+        <!-- Caminho absoluto imune ao MOSAIC -->
+        <tripinfo-output value="C:/Users/Luis/Desktop/RV_/eclipse-mosaic-25.2/scenarios/Roadworks/tripinfo_temp.xml"/>
         <tripinfo-output.write-unfinished value="true"/>
     </output>
     
     <time>
         <begin value="0"/>
-        <end value="1000"/>
+        <end value="2500"/>
     </time>
 </configuration>

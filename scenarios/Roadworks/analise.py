@@ -1,9 +1,14 @@
 import xml.etree.ElementTree as ET
 import numpy as np
+import os
 
 def analisar_cenario(nome_ficheiro):
+    # Apontar explicitamente para a subpasta onde o PowerShell guardou os dados
+    pasta_resultados = "resultados_tese"
+    caminho_completo = os.path.join(pasta_resultados, nome_ficheiro)
+    
     try:
-        tree = ET.parse(nome_ficheiro)
+        tree = ET.parse(caminho_completo)
         root = tree.getroot()
         
         duracoes = []
@@ -28,10 +33,10 @@ def analisar_cenario(nome_ficheiro):
             
             return media_duracao, p95_duracao, media_perda, p95_perda
         else:
-            print(f"Nenhum veículo encontrado em {nome_ficheiro}\n")
+            print(f"Nenhum veículo encontrado em {caminho_completo}\n")
             
     except FileNotFoundError:
-        print(f"Ficheiro {nome_ficheiro} não encontrado.\n")
+        print(f"Ficheiro {caminho_completo} não encontrado. Verifica se o PowerShell os gerou corretamente.\n")
 
 # Executar a análise
 print("A extrair dados e calcular Percentis (p95)...\n")

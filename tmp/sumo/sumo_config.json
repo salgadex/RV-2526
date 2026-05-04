@@ -1,9 +1,0 @@
-{
-  "sumoConfigurationFile": "roadworks.sumocfg",
-  "updateInterval": "1.0 s",
-  "visualize": false,
-  "commandLineOptions": [
-    "--tripinfo-output=tripinfo.xml",
-    "--device.emissions.probability=0"
-  ]
-}

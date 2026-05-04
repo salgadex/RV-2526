@@ -1,0 +1,2 @@
+Add-Content -Path .gitignore -Value "logs/"
+Add-Content -Path .gitignore -Value "tmp/"

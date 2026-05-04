@@ -54,20 +54,20 @@
   ],
   "typeDistributions": {
     "carro": [
-      { "name": "carro_v2x", "weight": 25 },
-      { "name": "carro_legacy", "weight": 75 }
+      { "name": "carro_v2x", "weight": 100 },
+      { "name": "carro_legacy", "weight": 0 }
     ],
     "mota": [
-      { "name": "mota_v2x", "weight": 25 },
-      { "name": "mota_legacy", "weight": 75 }
+      { "name": "mota_v2x", "weight": 100 },
+      { "name": "mota_legacy", "weight": 0 }
     ],
     "van": [
-      { "name": "van_v2x", "weight": 25 },
-      { "name": "van_legacy", "weight": 75 }
+      { "name": "van_v2x", "weight": 100 },
+      { "name": "van_legacy", "weight": 0 }
     ],
     "camiao_trafego": [
-      { "name": "camiao_trafego_v2x", "weight": 25 },
-      { "name": "camiao_trafego_legacy", "weight": 75 }
+      { "name": "camiao_trafego_v2x", "weight": 100 },
+      { "name": "camiao_trafego_legacy", "weight": 0 }
     ]
   },
   "rsus": [
