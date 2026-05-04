@@ -1,0 +1,14 @@
+{
+  "cam": {
+    "enabled": true,
+    "periodMs": 1000
+  },
+  "denm": {
+    "enabled": true,
+    "handleWorkzone": true
+  },
+  "v2x": {
+    "technology": "ITS_G5",
+    "maxHopCount": 4
+  }
+}

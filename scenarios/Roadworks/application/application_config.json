@@ -1,0 +1,16 @@
+{
+  "applications": [
+    {
+      "id": "rsu-app",
+      "unitNamePattern": "rsu_.*",
+      "className": "pt.uminho.v2x.RsuObrasApp",
+      "configFile": "RsuObrasApp.json"
+    },
+    {
+      "id": "veh-app",
+      "unitNamePattern": "veh_.*",
+      "className": "pt.uminho.v2x.VeiculoApp",
+      "configFile": "EtsiApplication.json"
+    }
+  ]
+}

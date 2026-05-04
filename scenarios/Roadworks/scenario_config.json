@@ -1,0 +1,26 @@
+{
+    "simulation": {
+        "id": "roadworks",
+        "duration": "2500s",
+        "randomSeed": 1234,
+        "projection": {
+            "centerCoordinates": {
+                "latitude": 41.441573,
+                "longitude": -8.271623
+            },
+            "proj4": "+proj=tmerc +lat_0=52.52437 +lon_0=13.41053 +datum=WGS84 +units=m +no_defs",
+            "cartesianOffset": {
+                "x": -560847.177,
+                "y": -4588033.727
+            }
+        }
+    },
+    "federates": {
+        "application": true,
+        "cell": false,
+        "environment": false,
+        "sns": true,
+        "sumo": true,
+        "output": true
+    }
+}

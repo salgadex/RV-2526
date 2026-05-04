@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<output id="output" enabled="true" update="1">
+    <loader>org.eclipse.mosaic.fed.output.generator.file.FileOutputLoader</loader>
+
+    <filename>comunicacoesv2x.csv</filename>
+    <directory>./output</directory>
+    <separator>;</separator>
+    <decimalSeparator>.</decimalSeparator>
+
+    <subscriptions>
+        <subscription id="V2xMessageTransmission" enabled="true">
+            <entries>
+                <entry>Time</entry>
+                <entry>Type</entry>
+                <entry>Message.Payload.EffectiveLength</entry>
+                <entry>SourceName</entry>
+            </entries>
+        </subscription>
+
+        <subscription id="V2xMessageReception" enabled="true">
+            <entries>
+                <entry>Time</entry>
+                <entry>Type</entry>
+                <entry>Message.Payload.EffectiveLength</entry>
+                <entry>ReceiverName</entry>
+            </entries>
+        </subscription>
+    </subscriptions>
+</output>

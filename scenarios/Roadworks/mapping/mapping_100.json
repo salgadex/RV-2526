@@ -1,0 +1,85 @@
+{
+  "config": {
+    "scaleTraffic": 1.0,
+    "fixedOrder": false,
+    "randomizeFlows": false,
+    "randomizeStartingTimes": false,
+    "randomizeWeights": false
+  },
+  "prototypes": [
+    {
+      "name": "carro_v2x",
+      "applications": [
+        "org.eclipse.mosaic.fed.application.app.etsi.VehicleCamSendingApp",
+        "pt.uminho.v2x.VeiculoApp"
+      ]
+    },
+    {
+      "name": "carro_legacy",
+      "applications": []
+    },
+    {
+      "name": "mota_v2x",
+      "applications": [
+        "org.eclipse.mosaic.fed.application.app.etsi.VehicleCamSendingApp",
+        "pt.uminho.v2x.VeiculoApp"
+      ]
+    },
+    {
+      "name": "mota_legacy",
+      "applications": []
+    },
+    {
+      "name": "van_v2x",
+      "applications": [
+        "org.eclipse.mosaic.fed.application.app.etsi.VehicleCamSendingApp",
+        "pt.uminho.v2x.VeiculoApp"
+      ]
+    },
+    {
+      "name": "van_legacy",
+      "applications": []
+    },
+    {
+      "name": "camiao_trafego_v2x",
+      "applications": [
+        "org.eclipse.mosaic.fed.application.app.etsi.VehicleCamSendingApp",
+        "pt.uminho.v2x.VeiculoApp"
+      ]
+    },
+    {
+      "name": "camiao_trafego_legacy",
+      "applications": []
+    }
+  ],
+  "typeDistributions": {
+    "carro": [
+      { "name": "carro_v2x", "weight": 100 },
+      { "name": "carro_legacy", "weight": 0 }
+    ],
+    "mota": [
+      { "name": "mota_v2x", "weight": 100 },
+      { "name": "mota_legacy", "weight": 0 }
+    ],
+    "van": [
+      { "name": "van_v2x", "weight": 100 },
+      { "name": "van_legacy", "weight": 0 }
+    ],
+    "camiao_trafego": [
+      { "name": "camiao_trafego_v2x", "weight": 100 },
+      { "name": "camiao_trafego_legacy", "weight": 0 }
+    ]
+  },
+  "rsus": [
+    {
+      "name": "RSU_Obras",
+      "position": {
+        "latitude": 41.441573,
+        "longitude": -8.271623
+      },
+      "applications": [
+        "pt.uminho.v2x.RsuObrasApp"
+      ]
+    }
+  ]
+}

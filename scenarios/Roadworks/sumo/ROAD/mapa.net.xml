@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-02-16T19:09:13.257096+00:00 by Eclipse SUMO netconvert 1.26.0
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="nodes.nod.xml"/>
+        <edge-files value="edges.edg.xml"/>
+        <connection-files value="connections.con.xml"/>
+    </input>
+
+    <output>
+        <output-file value="mapa.net.xml"/>
+    </output>
+
+</netconvertConfiguration>
+-->
+
+<net version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="-560847.177,-4588033.727" convBoundary="0.00,0.00,0.00,0.00" origBoundary="560847.177,4588033.727,560847.177,4588033.727" projParameter="+proj=utm +zone=29 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"/>
+    <edge id=":node0_0" function="internal">
+        <lane id=":node0_0_0" index="0" speed="3.82" length="5.11" width="3.50" shape="0.00,1.75 -1.31,0.88 -1.75,0.00 -1.31,-0.88 0.00,-1.75"/>
+    </edge>
+    <edge id=":node1_0" function="internal">
+        <lane id=":node1_0_0" index="0" speed="20.75" length="1.75" width="3.50" shape="2000.00,-5.25 2000.00,-1.75"/>
+        <lane id=":node1_0_1" index="1" speed="20.75" length="1.75" width="3.50" shape="2000.00,-1.75 2000.00,-1.75"/>
+    </edge>
+    <edge id=":node2_0" function="internal">
+        <lane id=":node2_0_0" index="0" speed="20.75" length="1.75" width="3.50" shape="2500.00,-1.75 2500.00,-5.25"/>
+        <lane id=":node2_0_1" index="1" speed="20.75" length="1.75" width="3.50" shape="2500.00,-1.75 2500.00,-1.75"/>
+    </edge>
+    <edge id=":node3_0" function="internal">
+        <lane id=":node3_0_0" index="0" speed="3.82" length="5.11" width="3.50" shape="3500.00,-1.75 3501.31,-0.88 3501.75,0.00 3501.31,0.88 3500.00,1.75"/>
+    </edge>
+
+    <edge id="edge_ida_1" from="node0" to="node1" priority="1">
+        <lane id="edge_ida_1_0" index="0" speed="27.70" length="2000.00" width="3.50" shape="0.00,-5.25 2000.00,-5.25"/>
+        <lane id="edge_ida_1_1" index="1" speed="27.70" length="2000.00" width="3.50" shape="0.00,-1.75 2000.00,-1.75"/>
+    </edge>
+    <edge id="edge_ida_2" from="node1" to="node2" priority="1">
+        <lane id="edge_ida_2_0" index="0" disallow="passenger" speed="13.80" length="500.00" width="3.50" shape="2000.00,-5.25 2500.00,-5.25"/>
+        <lane id="edge_ida_2_1" index="1" speed="13.80" length="500.00" width="3.50" shape="2000.00,-1.75 2500.00,-1.75"/>
+    </edge>
+    <edge id="edge_ida_3" from="node2" to="node3" priority="1">
+        <lane id="edge_ida_3_0" index="0" speed="27.70" length="1000.00" width="3.50" shape="2500.00,-5.25 3500.00,-5.25"/>
+        <lane id="edge_ida_3_1" index="1" speed="27.70" length="1000.00" width="3.50" shape="2500.00,-1.75 3500.00,-1.75"/>
+    </edge>
+    <edge id="edge_volta_1" from="node3" to="node0" priority="1">
+        <lane id="edge_volta_1_0" index="0" speed="27.70" length="3500.00" width="3.50" shape="3500.00,5.25 0.00,5.25"/>
+        <lane id="edge_volta_1_1" index="1" speed="27.70" length="3500.00" width="3.50" shape="3500.00,1.75 0.00,1.75"/>
+    </edge>
+
+    <junction id="node0" type="priority" x="0.00" y="0.00" incLanes="edge_volta_1_0 edge_volta_1_1" intLanes=":node0_0_0" shape="0.00,0.00 0.00,7.00 0.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="node1" type="priority" x="2000.00" y="0.00" incLanes="edge_ida_1_0 edge_ida_1_1" intLanes=":node1_0_0 :node1_0_1" shape="2000.00,0.00 2000.00,-7.00 2000.00,0.00">
+        <request index="0" response="10" foes="10" cont="0"/>
+        <request index="1" response="00" foes="01" cont="0"/>
+    </junction>
+    <junction id="node2" type="priority" x="2500.00" y="0.00" incLanes="edge_ida_2_0 edge_ida_2_1" intLanes=":node2_0_0 :node2_0_1" shape="2500.00,0.00 2500.00,-7.00 2500.00,0.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="node3" type="priority" x="3500.00" y="0.00" incLanes="edge_ida_3_0 edge_ida_3_1" intLanes=":node3_0_0" shape="3500.00,0.00 3500.00,-7.00 3500.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+
+    <connection from="edge_ida_1" to="edge_ida_2" fromLane="0" toLane="1" via=":node1_0_0" dir="s" state="m"/>
+    <connection from="edge_ida_1" to="edge_ida_2" fromLane="1" toLane="1" pass="1" keepClear="0" via=":node1_0_1" dir="s" state="M"/>
+    <connection from="edge_ida_2" to="edge_ida_3" fromLane="1" toLane="0" via=":node2_0_0" dir="s" state="M"/>
+    <connection from="edge_ida_2" to="edge_ida_3" fromLane="1" toLane="1" via=":node2_0_1" dir="s" state="M"/>
+    <connection from="edge_ida_3" to="edge_volta_1" fromLane="1" toLane="1" via=":node3_0_0" dir="t" state="M"/>
+    <connection from="edge_volta_1" to="edge_ida_1" fromLane="1" toLane="1" via=":node0_0_0" dir="t" state="M"/>
+
+    <connection from=":node0_0" to="edge_ida_1" fromLane="0" toLane="1" dir="t" state="M"/>
+    <connection from=":node1_0" to="edge_ida_2" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":node1_0" to="edge_ida_2" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":node2_0" to="edge_ida_3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":node2_0" to="edge_ida_3" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":node3_0" to="edge_volta_1" fromLane="0" toLane="1" dir="t" state="M"/>
+    
+</net>

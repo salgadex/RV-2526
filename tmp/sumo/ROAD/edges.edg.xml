@@ -1,0 +1,11 @@
+<edges>
+    <edge id="edge_ida_1" from="node0" to="node1" priority="1" numLanes="2" speed="27.7" spreadType="right" width="3.5"/>
+    
+    <edge id="edge_ida_2" from="node1" to="node2" priority="1" numLanes="2" speed="13.8" spreadType="right" width="3.5">
+        <lane index="0" disallow="passenger"/>
+        </edge>
+
+    <edge id="edge_ida_3" from="node2" to="node3" priority="1" numLanes="2" speed="27.7" spreadType="right" width="3.5"/>
+
+    <edge id="edge_volta_1" from="node3" to="node0" priority="1" numLanes="2" speed="27.7" spreadType="right" width="3.5"/>
+</edges>

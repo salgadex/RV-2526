@@ -1,0 +1,11 @@
+<connections>
+    <connection from="edge_ida_1" to="edge_ida_2" fromLane="1" toLane="1" pass="true"/>
+
+    <connection from="edge_ida_1" to="edge_ida_2" fromLane="0" toLane="1"/>
+
+
+    <connection from="edge_ida_2" to="edge_ida_3" fromLane="1" toLane="1"/>
+    
+    <connection from="edge_ida_2" to="edge_ida_3" fromLane="1" toLane="0"/>
+
+</connections>
