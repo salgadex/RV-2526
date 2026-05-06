@@ -1,0 +1,7 @@
+<additional>
+    <!-- Detetor E2 para a faixa da direita (0) da via de aproximação -->
+    <laneAreaDetector id="e2_aprox_faixa0" lane="edge_ida_1_0" pos="0" length="2000" freq="60" file="C:/Users/Luis/Desktop/RV_/eclipse-mosaic-25.2/scenarios/Roadworks/queue_metrics_temp.xml" haltingSpeedThreshold="1.38" />
+    
+    <!-- Detetor E2 para a faixa da esquerda (1) da via de aproximação -->
+    <laneAreaDetector id="e2_aprox_faixa1" lane="edge_ida_1_1" pos="0" length="2000" freq="60" file="C:/Users/Luis/Desktop/RV_/eclipse-mosaic-25.2/scenarios/Roadworks/queue_metrics_temp.xml" haltingSpeedThreshold="1.38" />
+</additional>

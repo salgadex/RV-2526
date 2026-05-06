@@ -3,11 +3,11 @@
     <input>
         <net-file value="ROAD/mapa.net.xml"/>
         <route-files value="TRAFFIC/trafego.rou.xml"/>
-        <additional-files value="mosaic_types.add.xml,ROAD/decoracao.add.xml"/>
+        <!-- Todos os ficheiros adicionais combinados numa única tag -->
+        <additional-files value="mosaic_types.add.xml,ROAD/decoracao.add.xml,additional.add.xml"/>
     </input>
     
     <output>
-        <!-- Caminho absoluto imune ao MOSAIC -->
         <tripinfo-output value="C:/Users/Luis/Desktop/RV_/eclipse-mosaic-25.2/scenarios/Roadworks/tripinfo_temp.xml"/>
         <tripinfo-output.write-unfinished value="true"/>
     </output>
