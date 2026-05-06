@@ -72,7 +72,8 @@ plt.style.use('ggplot')
 # 1. Gráfico de TimeLoss (p95) e Escoamento (Throughput)
 fig, ax1 = plt.subplots(figsize=(8, 5))
 color = 'tab:red'
-ax1.set_xlabel('Penetração V2X (%)', fontweight='bold')
+# --- ALTERAÇÃO DO EIXO X AQUI ---
+ax1.set_xlabel('Veículos Equipados com V2X (%)', fontweight='bold')
 ax1.set_ylabel('TimeLoss p95 (segundos)', color=color, fontweight='bold')
 ax1.plot(penetrations, timeloss_p95, marker='o', color=color, linewidth=2, label='TimeLoss (p95)')
 ax1.tick_params(axis='y', labelcolor=color)
@@ -91,7 +92,8 @@ plt.close()
 # 2. Gráfico do Comprimento da Fila vs Veículos Parados (Stop-and-Go)
 fig, ax1 = plt.subplots(figsize=(8, 5))
 color = 'tab:purple'
-ax1.set_xlabel('Penetração V2X (%)', fontweight='bold')
+# --- ALTERAÇÃO DO EIXO X AQUI ---
+ax1.set_xlabel('Veículos Equipados com V2X (%)', fontweight='bold')
 ax1.set_ylabel('Extensão Máx. da Fila (metros)', color=color, fontweight='bold')
 ax1.bar(penetrations, jam_length_max, width=8, color=color, alpha=0.6, label='Extensão Fila')
 ax1.tick_params(axis='y', labelcolor=color)
@@ -99,12 +101,13 @@ ax1.tick_params(axis='y', labelcolor=color)
 ax2 = ax1.twinx()  
 color = 'tab:orange'
 ax2.set_ylabel('Veículos Imobilizados (< 5km/h)', color=color, fontweight='bold')
-ax2.plot(penetrations, halting_vehicles_max, marker='^', color=color, linewidth=3, label='Halting Vehicles')
+ax2.plot(penetrations, halting_vehicles_max, marker='^', color=color, linewidth=3, label='Veículos Imobilizados')
 ax2.tick_params(axis='y', labelcolor=color)
 
-plt.title('Harmonização de Fluxo (Fila Dinâmica vs Paragens Abruptas)', fontweight='bold')
+# --- ALTERAÇÃO DO TÍTULO AQUI ---
+plt.title('Mitigação da Onda de Choque: Fila vs. Imobilização', fontweight='bold')
 fig.tight_layout()
 plt.savefig('grafico_filas.png', dpi=300)
 plt.close()
 
-print("\n[SUCESSO] Gráficos gerados e guardados na diretoria atual (formato .png)!")
+print("\n[SUCESSO] Gráficos atualizados e guardados na diretoria atual (formato .png)!")
